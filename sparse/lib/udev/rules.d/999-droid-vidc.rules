@@ -1,0 +1,4 @@
+KERNEL=="video32", SYMLINK+="video/venus_dec"
+KERNEL=="video33", SYMLINK+="video/venus_enc"
+KERNEL=="video34", SYMLINK+="video/q6_dec"
+KERNEL=="video35", SYMLINK+="video/q6_enc"
