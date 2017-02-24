@@ -82,5 +82,8 @@ Requires:
 # Flashlight
 - jolla-settings-system-flashlight
 
+# DualSIM
+- jolla-settings-networking-multisim
+
 Summary: Jolla HW Adaptation ham
 
