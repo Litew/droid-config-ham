@@ -15,6 +15,7 @@ Requires:
 - droid-config-ham-pulseaudio-settings
 - droid-config-ham-policy-settings
 - droid-config-ham-preinit-plugin
+- droid-config-ham-bluez4
 - droid-hal-version-ham
 
 - audioflingerglue
