@@ -78,5 +78,8 @@ Requires:
 # For devices where test_gps eventually gets a fix:
 - geoclue-provider-hybris
 
+# Flashlight
+- jolla-settings-system-flashlight
+
 Summary: Jolla HW Adaptation ham
 
