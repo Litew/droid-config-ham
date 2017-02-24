@@ -5,7 +5,7 @@ Description: Pattern with packages for ham HW Adaptation
 Name: jolla-hw-adaptation-ham
 Requires:
 - pattern:jolla-hw-adaptation-hybris
-- pattern:jolla-hw-adaptation-hybris-droid-vibrator
+#- pattern:jolla-hw-adaptation-hybris-droid-vibrator
 - pattern:jolla-ui-configuration-ham
 
 - droid-hal-ham
