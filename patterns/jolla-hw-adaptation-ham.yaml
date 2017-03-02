@@ -84,8 +84,5 @@ Requires:
 #- qt5-qtmultimedia-plugin-mediaservice-irisradio
 #- jolla-mediaplayer-radio
 
-# Flashlight
-- jolla-settings-system-flashlight
-
 Summary: Jolla HW Adaptation ham
 
