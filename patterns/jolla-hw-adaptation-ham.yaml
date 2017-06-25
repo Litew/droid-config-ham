@@ -12,7 +12,7 @@ Requires:
 - droid-config-ham-policy-settings
 - droid-config-ham-preinit-plugin
 - droid-config-ham-flashing
-- droid-config-ham-bluez4
+- droid-config-ham-bluez5
 - droid-hal-version-ham
 
 # Hybris packages
