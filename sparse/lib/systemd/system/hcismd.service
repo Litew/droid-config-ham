@@ -1,0 +1,25 @@
+[Unit]
+Description=Enable Bluetooth HCI over SMD
+After=dev-wcnss_ctrl.device local-fs.target
+Before=bluetooth.service
+Conflicts=shutdown.target actdead.target
+
+[Service]
+Environment=WCNSS_IS_READY=/sys/module/wcnsscore/parameters/wcnss_is_ready
+Environment=HCISMD_SET=/sys/module/hci_smd/parameters/hcismd_set
+Environment=BOARD_ADDRESS=/var/lib/bluetooth/board-address
+
+Type=forking
+RemainAfterExit=yes
+ExecStartPre=/bin/sh -c "[ $(cat $WCNSS_IS_READY) -eq '1' ]"
+ExecStartPre=/bin/sh -c "echo 0 > $HCISMD_SET"
+ExecStart=/bin/sh -c "/system/bin/hci_qcomm_init -e 2>&1 | grep -oP '([0-9a-f]{2}:){5}([0-9a-f]{2})' > $BOARD_ADDRESS"
+ExecStartPost=/bin/sh -c "echo 1 > $HCISMD_SET"
+ExecStop=/bin/sh -c "echo 0 > $HCISMD_SET"
+Restart=on-failure
+RestartSec=5
+StartLimitBurst=20
+
+[Install]
+WantedBy=bluetooth.service
+
