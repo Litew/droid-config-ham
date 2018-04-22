@@ -24,16 +24,13 @@ Requires:
 - hybris-libsensorfw-qt5
 
 # Vibra
-# - ngfd-plugin-droid-vibrator
-# - qt5-feedback-haptics-droid-vibrator
-
-# Haptics/Vibra with ffmemless
 - qt5-feedback-haptics-ffmemless
 
 # Needed for /dev/touchscreen symlink
 - qt5-plugin-generic-evdev
 
 - pulseaudio-modules-droid
+- pulseaudio-modules-droid-glue
 # for audio recording to work:
 - qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
@@ -77,12 +74,12 @@ Requires:
 # For GPS
 - geoclue-provider-hybris
 
-# For audio in calls
-- pulseaudio-modules-droid-glue
-
 # For FM radio on some QCOM devices
 #- qt5-qtmultimedia-plugin-mediaservice-irisradio
 #- jolla-mediaplayer-radio
+
+# Flashlight
+- jolla-settings-system-flashlight
 
 Summary: Jolla HW Adaptation ham
 
